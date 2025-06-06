@@ -33,6 +33,9 @@ $border-radius-button   : 8rem;
   margin: 0;
   box-sizing: border-box;
 }
+.sb-show-main{
+  background: #f0f0f1;
+}
 
 #admin-main-wrapper {
   padding: 1.5rem 1rem 0 0;
@@ -72,6 +75,9 @@ button,
   border-radius: $border-radius-small;
   font-size: 0.875rem;
   transition: all 0.3s linear;
+  background: $theme-color;
+  color: $color-white;
+  width: fit-content;
 
   &.btn-preview {
     padding: 0;
@@ -391,6 +397,111 @@ span.admin-pro-tag {
   }
 }
 
+// select style
+
+.main-select,
+.main-input{
+  background-color: #fff;
+  border: .12rem solid #e0e4e9;
+  outline: none;
+  width: 100%;
+  padding: .5rem;
+}
+
+.main-checkbox{
+  border: 1px solid #8c8f94;
+  border-radius: 4px;
+  background: #fff;
+  color: #50575e;
+  clear: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 0;
+  height: 1rem;
+}
+// toggle checkbox style start
+.toggle-checkbox-header{
+  display: inline-flex;
+  .toggle-checkbox {
+    position: relative;
+    margin-right: 0.5rem;
+
+    .admin-pro-tag {
+      left: 4.25rem;
+      width: fit-content;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0.45rem;
+      width: 0.25rem;
+      height: 0.25rem;
+      border: $border-theme-small;
+      border-radius: $border-radius-button;
+      transition: 0.3s;
+      z-index: 0;
+      transform: translateY(-50%);
+    }
+
+    input {
+      display: none; // Hide for toggle button
+    }
+
+    label {
+      cursor: pointer;
+      width: 3rem;
+      height: 1.4rem;
+      background: 0 0;
+      display: block;
+      border-radius: $border-radius-button;
+      position: relative;
+      border: $border-light-medium;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0.5rem;
+        width: 0.1rem;
+        height: 0.563rem;
+        background: $color-white;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0.313rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        background: $color-active;
+        border-radius: 90rem;
+        transition: 0.3s;
+        z-index: 1;
+      }
+    }
+
+    input:checked+label {
+      background: $color-active;
+      border: $border-theme-medius;
+    }
+
+    input:checked+label::after {
+      left: calc(100% - 1rem);
+      transform: translateY(-50%);
+      background: $background-color;
+    }
+  }
+}
+// toggle checkbox style end
+
+
 .details-status-row {
   padding: 0.5rem 0.5rem 0.75rem;
   position: relative;
@@ -434,3 +545,4 @@ span.admin-pro-tag {
     width: 1.3125rem;
   }
 }
+
