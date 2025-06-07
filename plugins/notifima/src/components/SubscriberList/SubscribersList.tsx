@@ -4,7 +4,6 @@ import { Dialog } from "@mui/material";
 import { __ } from "@wordpress/i18n";
 import "./subscribersList.scss";
 
-
 const SubscribersList: React.FC = () => {
     const [openDialog, setOpenDialog] = useState(false);
     return (

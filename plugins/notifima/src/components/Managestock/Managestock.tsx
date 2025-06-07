@@ -5,7 +5,7 @@ import "./ManagestockTable.scss";
 import { __ } from "@wordpress/i18n";
 
 const Managestock: React.FC = () => {
-   const [openDialog, setOpenDialog] = useState(false);
+    const [openDialog, setOpenDialog] = useState(false);
     return (
         <>
             {!appLocalizer.khali_dabba ? (
@@ -35,7 +35,7 @@ const Managestock: React.FC = () => {
                     ></div>
                 </div>
             ) : (
-               <div id="manage_stock_table"></div>
+                <div id="manage_stock_table"></div>
             )}
         </>
     );
