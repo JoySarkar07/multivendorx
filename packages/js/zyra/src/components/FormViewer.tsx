@@ -50,7 +50,7 @@ interface FormFields {
 	butttonsetting?: any;
 }
 
-interface FormViewerProps {
+export interface FormViewerProps {
 	formFields: FormFields;
 	onSubmit: ( data: FormData ) => void;
 }
@@ -679,8 +679,8 @@ const FormViewer: React.FC< FormViewerProps > = ( {
 					children={ 'Submit' }
 				/>
 				<button
-					id="catalogx-close-enquiry-popup"
-					className="catalogx-close-enquiry-popup"
+					id="close-enquiry-popup"
+					className="admin-btn btn-red"
 				>
 					{ 'Close' }
 				</button>

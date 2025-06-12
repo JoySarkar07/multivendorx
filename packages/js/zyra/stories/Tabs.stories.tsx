@@ -23,7 +23,7 @@ export const TestTabs: Story = {
 							id: 'general',
 							name: 'General',
 							desc: 'Basic settings',
-							icon: 'icon-general',
+							icon: 'adminlib-settings',
 							link: '/settings/general',
 						},
 					},
@@ -33,7 +33,7 @@ export const TestTabs: Story = {
 							id: 'advanced',
 							name: 'Advanced',
 							desc: 'Advanced configuration',
-							icon: 'icon-advanced',
+							icon: 'adminlib-settings',
 							link: '/settings/advanced',
 							proDependent: true,
 						},
@@ -46,14 +46,14 @@ export const TestTabs: Story = {
 					id: 'integration',
 					name: 'Integration',
 					desc: 'Connect with third-party apps',
-					icon: 'icon-integration',
+					icon: 'adminlib-settings',
 					link: '/settings/integration',
 				},
 			},
 		],
 		currentTab: 'general',
 		getForm: ( currentTab ) => {
-			return <div>Form content for { currentTab }</div>;
+			return <div className="tab-description-body">Form content for { currentTab }</div>;
 		},
 		prepareUrl: ( tabId ) => `/settings/${ tabId }`,
 		HeaderSection: () => <header>Header</header>,
@@ -67,13 +67,19 @@ export const TestTabs: Story = {
 		supprot: [
 			{
 				title: 'Support',
-				icon: 'icon-support',
+				icon: 'adminlib-mail',
 				description: 'Get support',
 				link: 'https://support.example.com',
 			},
 			{
 				title: 'Docs',
-				icon: 'icon-docs',
+				icon: 'adminlib-mail',
+				description: 'Read documentation',
+				link: 'https://docs.example.com',
+			},
+			{
+				title: 'Docs',
+				icon: 'adminlib-mail',
 				description: 'Read documentation',
 				link: 'https://docs.example.com',
 			},

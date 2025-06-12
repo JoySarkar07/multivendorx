@@ -79,7 +79,6 @@ const MultipleOptions: React.FC< MultipleOptionsProps > = ( {
 			case 'dropdown':
 			case 'multiselect':
 				return (
-					<section className="select-input-section merge-components">
 						<select className="basic-select">
 							<option>Select...</option>
 							{ options.map( ( option, idx ) => (
@@ -88,7 +87,6 @@ const MultipleOptions: React.FC< MultipleOptionsProps > = ( {
 								</option>
 							) ) }
 						</select>
-					</section>
 				);
 			default:
 				return <p>Unsupported input type</p>;
@@ -166,6 +164,7 @@ const MultipleOptions: React.FC< MultipleOptionsProps > = ( {
 								<div className="option-label">
 									<input
 										type="text"
+										className="basic-input"
 										value={ option.label }
 										onChange={ ( event ) => {
 											settingHasChanged.current = true;
@@ -185,6 +184,7 @@ const MultipleOptions: React.FC< MultipleOptionsProps > = ( {
 								<div className="option-control-section">
 									<div
 										role="button"
+										className="delete-btn"
 										tabIndex={ 0 }
 										onClick={ () => {
 											settingHasChanged.current = true;

@@ -94,7 +94,7 @@ const Modules: React.FC< ModuleProps > = ( {
 			) }
 
 			<div className="tab-name">
-				<h1>Modules</h1>
+				<h2>Modules</h2>
 			</div>
 			<div className="module-option-row">
 				{ modulesArray.map( ( module ) => (
@@ -130,7 +130,7 @@ const Modules: React.FC< ModuleProps > = ( {
 								</a>
 							</div>
 							<div
-								className="toggle-checkbox-content"
+								className="toggle-checkbox"
 								data-showcase-tour={ `${ module.id }-showcase-tour` }
 							>
 								<input

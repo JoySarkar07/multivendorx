@@ -4,7 +4,7 @@
 import React, { ChangeEvent } from 'react';
 
 // Types
-interface MultiNumOption {
+export interface MultiNumOption {
 	key?: string;
 	value: string | number;
 	label?: string;
@@ -12,7 +12,7 @@ interface MultiNumOption {
 	type?: string;
 }
 
-interface MultiNumInputProps {
+export interface MultiNumInputProps {
 	parentWrapperClass?: string;
 	childWrapperClass?: string;
 	options: MultiNumOption[];

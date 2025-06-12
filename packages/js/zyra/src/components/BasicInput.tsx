@@ -8,7 +8,7 @@ import React, { ChangeEvent, MouseEvent, FocusEvent } from 'react';
  */
 
 // Types
-interface BasicInputProps {
+export interface BasicInputProps {
 	wrapperClass?: string;
 	inputLabel?: string;
 	inputClass?: string;

@@ -12,9 +12,8 @@ export default meta;
 type Story = StoryObj< typeof RadioInput >;
 
 const commonProps = {
-	wrapperClass: 'settings-form-group-radio',
-	inputWrapperClass: 'radio-basic-input-wrap',
-	inputClass: 'setting-form-input',
+	wrapperClass: 'radio-group',
+	inputClass: '',
 	descClass: 'settings-metabox-description',
 	activeClass: 'radio-select-active',
 	onChange: ( e ) => {
@@ -25,6 +24,7 @@ const commonProps = {
 export const TestRadioInput: Story = {
 	args: {
 		description: 'Choose your preferred theme color.',
+		inputWrapperClass: 'basic-radio',
 		value: 'dark',
 		name: 'themeColor',
 		type: 'default' as 'default',
@@ -60,23 +60,26 @@ export const TestRadioInput: Story = {
 export const TestRadioSelectInput: Story = {
 	args: {
 		description: 'Select store banner style',
+		inputWrapperClass: 'image-radio',
 		name: 'Banaer',
 		type: 'radio-select' as 'radio-select',
 		keyName: 'sample_radio_select',
+		labelOverlayClass: 'image-radio-overlay',
+		labelOverlayText: 'Select your Store',
 		options: [
 			{
 				key: 'option1',
 				name: 'Banaer',
 				label: 'Outer Space',
 				value: 'template1',
-				color: '#',
+				color: 'http://localhost/wordpress/wp-content/plugins/plugin-elements/src/assets/images/template1.jpg',
 			},
 			{
 				key: 'option2',
 				name: 'Banner',
 				label: 'Green Lagoon',
 				value: 'template2',
-				color: '#',
+				color: 'http://localhost/wordpress/wp-content/plugins/plugin-elements/src/assets/images/template1.jpg',
 			},
 		],
 		proSetting: false,
@@ -90,6 +93,7 @@ export const TestRadioSelectInput: Story = {
 export const TestRadioColorInput: Story = {
 	args: {
 		description: 'This is a simple radio color input',
+		inputWrapperClass: 'color-radio',
 		name: 'Radio Color',
 		type: 'radio-color' as 'radio-color',
 		keyName: 'sample_radio_color',

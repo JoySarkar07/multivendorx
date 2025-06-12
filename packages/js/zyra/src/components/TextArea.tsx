@@ -4,7 +4,7 @@
 import React, { ChangeEvent, MouseEvent, FocusEvent } from 'react';
 
 // Types
-interface TextAreaProps {
+export interface TextAreaProps {
 	id?: string;
 	name?: string;
 	value?: string | number;
@@ -46,7 +46,7 @@ export const TextArea: React.FC< TextAreaProps > = ( {
 	onBlur,
 } ) => {
 	return (
-		<div className={ wrapperClass }>
+		<>
 			<textarea
 				className={ inputClass }
 				id={ id }
@@ -70,7 +70,7 @@ export const TextArea: React.FC< TextAreaProps > = ( {
 					dangerouslySetInnerHTML={ { __html: description } }
 				></p>
 			) }
-		</div>
+		</>
 	);
 };
 

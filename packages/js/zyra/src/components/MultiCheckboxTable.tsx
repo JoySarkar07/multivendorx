@@ -115,7 +115,7 @@ const SearchOptionDisplay: React.FC< SearchOptionDisplayProps > = ( {
 			<div className="selected-input">
 				{ /* Search section */ }
 				<input
-					className=""
+					className="basic-input"
 					placeholder="Select..."
 					value={ filter }
 					onChange={ ( event ) => {

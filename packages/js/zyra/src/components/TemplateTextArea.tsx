@@ -28,7 +28,7 @@ const TemplateTextArea: React.FC< TextareaProps > = ( {
 					<p>{ label }</p>
 					<div className="settings-form-group-radio">
 						<input
-							className="input-text-section textArea-text-input"
+							className="basic-input"
 							type="text"
 							value={ placeholder }
 							readOnly
@@ -52,7 +52,7 @@ const TemplateTextArea: React.FC< TextareaProps > = ( {
 					/>
 					{ /* Render placeholder */ }
 					<input
-						className="input-text-section textArea-text-input"
+						className="basic-input"
 						type="text"
 						placeholder={ placeholder }
 						readOnly
