@@ -22,14 +22,14 @@ import TemplateSection from './TemplateSection';
 import DisplayButton from './DisplayButton';
 
 // Types
-interface Option {
+export interface Option {
 	id: string;
 	label: string;
 	value: string;
 	isdefault?: boolean;
 }
 
-interface SelectOption {
+export interface SelectOption {
 	icon: string;
 	value: string;
 	label: string;
@@ -466,11 +466,10 @@ const CustomFrom: React.FC< CustomFormProps > = ( {
 						<DisplayButton
 							wraperClass={ 'add-new-sections' }
 							children={
-								<div>
-									<span>
-										<i className="admin-font adminlib-move"></i>
-									</span>
-								</div>
+									<div className="icon-wrapper">
+										<span className="admin-font adminlib-move">								
+										</span>
+									</div>
 							}
 							onClick={ () => {
 								const newInput = appendNewFormField( 0 );
@@ -517,7 +516,7 @@ const CustomFrom: React.FC< CustomFormProps > = ( {
 									>
 										{ /* Render dragable button */ }
 										{ opendInput?.id === formField.id && (
-											<div className="bth-move drag-handle">
+											<div className="bth-move">
 												<i className="admin-font adminlib-move"></i>
 											</div>
 										) }
@@ -712,9 +711,8 @@ const CustomFrom: React.FC< CustomFormProps > = ( {
 										<DisplayButton
 											wraperClass={ 'add-new-sections' }
 											children={
-												<div>
-													<span>
-														<i className="admin-font adminlib-move"></i>
+												<div className="icon-wrapper">
+													<span className="admin-font adminlib-move">								
 													</span>
 												</div>
 											}
@@ -760,10 +758,10 @@ const CustomFrom: React.FC< CustomFormProps > = ( {
 				<DisplayButton
 					wraperClass="addnew"
 					children={
-						<div>
+						<>
 							<i className="admin-font adminlib-move"></i>
 							<p>{ 'Click to add next text field' }</p>
-						</div>
+						</>
 					}
 					onClick={ () => {
 						const newInput = appendNewFormField(

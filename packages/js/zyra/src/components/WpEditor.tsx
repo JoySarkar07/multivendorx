@@ -7,7 +7,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import React from 'react';
 
 // Types
-interface WpEditorProps {
+export interface WpEditorProps {
 	apiKey: string;
 	value: string;
 	onEditorChange: ( content: string ) => void;

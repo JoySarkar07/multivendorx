@@ -73,6 +73,7 @@ const FormFieldSelect: React.FC< FormFieldSelectProps > = ( {
 		<select
 			onChange={ ( event ) => onTypeChange?.( event.target.value ) }
 			value={ formField.type }
+			className="basic-select"
 		>
 			{ inputTypeList.map( ( inputType ) => (
 				<option key={ inputType.value } value={ inputType.value }>
@@ -244,7 +245,7 @@ const SettingMetaBox: React.FC< SettingMetaBoxProps > = ( {
 				<Draggable>
 					<section className="meta-setting-modal">
 						<button
-							className="meta-setting-modal-button"
+							className="wrapper-close"
 							onClick={ ( event ) => {
 								event.stopPropagation();
 								setHasOpened( false );

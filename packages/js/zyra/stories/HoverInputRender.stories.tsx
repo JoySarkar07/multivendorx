@@ -30,7 +30,7 @@ export const TestHoverInputRender: Story = {
 					<p>{ label }</p>
 					<div className="settings-form-group-radio">
 						<input
-							className="input-text-section simpleInput-text-input"
+							className="basic-input"
 							type="text"
 							placeholder={ placeholder }
 						/>
@@ -49,7 +49,7 @@ export const TestHoverInputRender: Story = {
 		} ) => (
 			<>
 				<input
-					className="input-label simpleInput-label"
+					className="basic-input"
 					type="text"
 					value={ label }
 					onChange={ ( event ) =>
@@ -57,7 +57,7 @@ export const TestHoverInputRender: Story = {
 					}
 				/>
 				<input
-					className="input-text-section simpleInput-text-input"
+					className="basic-input"
 					type="text"
 					readOnly
 					placeholder={ placeholder }

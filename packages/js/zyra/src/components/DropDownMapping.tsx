@@ -9,7 +9,7 @@ import React, { useEffect, useRef, useState, useMemo } from 'react';
 import '../styles/web/DropDownMapping.scss';
 
 // Types
-interface DropDownMappingProps {
+export interface DropDownMappingProps {
 	value?: [ string, string ][];
 	onChange: ( value: [ string, string ][] ) => void;
 	proSetting?: boolean;
@@ -227,7 +227,7 @@ const DropDownMapping: React.FC< DropDownMappingProps > = ( {
 				</div>
 				<div className="add-mapping-container">
 					<button
-						className={ `btn-purple add-mapping ${
+						className={ `admin-btn btn-purple ${
 							btnAllow ? 'not-allow' : ''
 						}` }
 						onClick={ ( e ) => {

@@ -31,7 +31,7 @@ const PENALTY = 28;
 const COOLDOWN = 1;
 
 // Types
-interface Subscriber {
+export interface Subscriber {
 	date: string;
 	email: string;
 	image: string;
@@ -49,7 +49,7 @@ type SubscriberStatus = {
 	count: number;
 };
 
-interface TableCellProps {
+export interface TableCellProps {
 	title: string;
 	fieldValue?: string | boolean;
 	children?: ReactNode;
@@ -58,7 +58,7 @@ interface TableCellProps {
 	onChange?: ( e: React.ChangeEvent< HTMLInputElement > ) => void;
 }
 
-interface RealtimeFilter {
+export interface RealtimeFilter {
 	name: string;
 	render: (
 		updateFilter: ( key: string, value: any ) => void,
@@ -513,7 +513,7 @@ const Table: React.FC< TableProps > = ( {
 							{ /* Pagination Controls */ }
 							<div className="table-pagination">
 								{ /* Page size dropdown */ }
-								<div className="Pagination-number-wrapper">
+								<div className="pagination-number-wrapper">
 									Rows per page:
 									<select
 										value={
@@ -532,7 +532,7 @@ const Table: React.FC< TableProps > = ( {
 										) ) }
 									</select>
 								</div>
-								<div className="Pagination-arrow">
+								<div className="pagination-arrow">
 									<div
 										role="button"
 										tabIndex={ 0 }

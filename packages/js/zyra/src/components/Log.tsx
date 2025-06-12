@@ -11,7 +11,7 @@ import { getApiLink } from '../utils/apiService';
 import '../styles/web/Log.scss';
 
 // Types
-interface LogProps {
+export interface LogProps {
 	apiLink: string;
 	downloadFileName: string;
 	appLocalizer: Record< string, any >; // Allows any structure

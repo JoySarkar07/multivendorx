@@ -18,7 +18,6 @@ export const TestTextArea: Story = {
 		value: 'Initial comment text',
 		maxLength: 500,
 		placeholder: 'Write your comments here...',
-		wrapperClass: 'textarea-wrapper',
 		inputClass: 'textarea-input',
 		rowNumber: 5,
 		colNumber: 50,

@@ -146,11 +146,12 @@ const Customizer: React.FC< CustomizerProps > = ( {
 													key={ item.key }
 													className="section"
 												>
-													<span className="label">
+													<p>
 														{ item.label }
-													</span>
+													</p>
 													<div className="property-section">
 														<input
+															className="basic-input"
 															type={ item.type }
 															value={
 																setting[
@@ -178,9 +179,10 @@ const Customizer: React.FC< CustomizerProps > = ( {
 						<div className="section-wrapper border">
 							<div className="simple">
 								<div className="section">
-									<span className="lable">Border Color</span>
+									<p>Border Color</p>
 									<div className="property-section">
 										<input
+											className="basic-input"
 											type="color"
 											value={
 												setting.button_border_color
@@ -195,6 +197,7 @@ const Customizer: React.FC< CustomizerProps > = ( {
 											}
 										/>
 										<input
+											className="basic-input"
 											onChange={ ( e ) =>
 												onChange(
 													'button_border_color',
@@ -211,11 +214,11 @@ const Customizer: React.FC< CustomizerProps > = ( {
 									</div>
 								</div>
 								<div className="section section-row">
-									<span className="lable">Border Size</span>
-									<div className="property-section">
+									<p>Border Size</p>
+									<div className="property-section small">
 										{ /* <div class="PB-range-slider-div"> */ }
 										<input
-											className="PB-range-slider"
+											className="basic-input"
 											type="number"
 											value={
 												setting.button_border_size
@@ -235,13 +238,13 @@ const Customizer: React.FC< CustomizerProps > = ( {
 									</div>
 								</div>
 								<div className="section section-row">
-									<span className="lable">
+									<p>
 										Border Radious
-									</span>
-									<div className="property-section">
+									</p>
+									<div className="property-section small">
 										{ /* <div class="PB-range-slider-div"> */ }
 										<input
-											className="PB-range-slider"
+											className="basic-input"
 											type="number"
 											value={
 												setting.button_border_radious
@@ -263,11 +266,12 @@ const Customizer: React.FC< CustomizerProps > = ( {
 							</div>
 							<div className="section-wrapper hover">
 								<div className="section">
-									<span className="lable">
+									<p>
 										Border Color On Hover
-									</span>
+									</p>
 									<div className="property-section">
 										<input
+											className="basic-input"
 											type="color"
 											value={
 												setting.button_border_color_onhover
@@ -282,6 +286,7 @@ const Customizer: React.FC< CustomizerProps > = ( {
 											}
 										/>
 										<input
+											className="basic-input"
 											type="text"
 											value={
 												setting.button_border_color_onhover
@@ -304,11 +309,10 @@ const Customizer: React.FC< CustomizerProps > = ( {
 						<div className="section-wrapper font">
 							<div className="simple">
 								<div className="section">
-									<span className="lable">Button text</span>
+									<p>Button text</p>
 									<div className="property-section">
-										<div className="PB-range-slider-div">
 											<input
-												className="PB-range-slider"
+												className="basic-input"
 												type="text"
 												value={ setting.button_text }
 												onChange={ ( e ) =>
@@ -318,15 +322,15 @@ const Customizer: React.FC< CustomizerProps > = ( {
 													)
 												}
 											/>
-										</div>
+										
 									</div>
 								</div>
 								<div className="section section-row">
-									<span className="lable">Font Size</span>
-									<div className="property-section">
+									<p>Font Size</p>
+									<div className="property-section small">
 										{ /* <div class="PB-range-slider-div"> */ }
 										<input
-											className="PB-range-slider"
+											className="basic-input"
 											type="number"
 											value={
 												setting.button_font_size
@@ -346,11 +350,11 @@ const Customizer: React.FC< CustomizerProps > = ( {
 									</div>
 								</div>
 								<div className="section section-row">
-									<span className="lable">Font Width</span>
-									<div className="property-section">
+									<p>Font Width</p>
+									<div className="property-section small">
 										{ /* <div class="PB-range-slider-div"> */ }
 										<input
-											className="PB-range-slider"
+											className="basic-input"
 											min={ 100 }
 											max={ 900 }
 											step={ 100 }
@@ -379,11 +383,11 @@ const Customizer: React.FC< CustomizerProps > = ( {
 						<div className="section-wrapper size">
 							<div className="simple">
 								<div className="section section-row">
-									<span className="lable">Padding</span>
-									<div className="property-section">
+									<p>Padding</p>
+									<div className="property-section small">
 										{ /* <div class="PB-range-slider-div"> */ }
 										<input
-											className="PB-range-slider"
+											className="basic-input"
 											type="number"
 											value={
 												setting.button_padding
@@ -403,11 +407,11 @@ const Customizer: React.FC< CustomizerProps > = ( {
 									</div>
 								</div>
 								<div className="section section-row">
-									<span className="lable">Margin</span>
-									<div className="property-section">
+									<p>Margin</p>
+									<div className="property-section small">
 										{ /* <div class="PB-range-slider-div"> */ }
 										<input
-											className="PB-range-slider"
+											className="basic-input"
 											type="number"
 											value={
 												setting.button_margin
@@ -466,11 +470,12 @@ const Customizer: React.FC< CustomizerProps > = ( {
 					{ select === 'setting' && (
 						<div className="section-wrapper settings">
 							<div className="section">
-								<span className="label">
+								<p>
 									{ 'System settings' }
-								</span>
+								</p>
 								<div className="property-section">
 									<button
+										className="admin-btn btn-purple"
 										onClick={ ( e ) => {
 											e.preventDefault();
 											onChange( '', {}, true );

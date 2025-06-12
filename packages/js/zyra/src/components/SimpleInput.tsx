@@ -42,7 +42,7 @@ const SimpleInput: React.FC< SimpleInputProps > = ( {
 			} ) => (
 				<>
 					<input
-						className="basic-label"
+						className="basic-input"
 						type="text"
 						value={ label }
 						onChange={ ( event ) =>

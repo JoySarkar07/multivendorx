@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-multi-date-picker';
 
 // Types
-interface CalendarInputProps {
+export interface CalendarInputProps {
 	wrapperClass?: string;
 	inputClass?: string;
 	format?: string;

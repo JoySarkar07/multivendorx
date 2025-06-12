@@ -18,7 +18,7 @@ export const TestMultiNumInput: Story = {
 		inputWrapperClass: 'settings-basic-input-child-class',
 		innerInputWrapperClass: 'setting-form-input',
 		inputLabelClass: 'setting-form-basic-input',
-		inputClass: 'form-control',
+		inputClass: 'basic-input',
 		idPrefix: 'setting-integer-input',
 		keyName: 'maxUsers',
 		value: [
@@ -31,6 +31,7 @@ export const TestMultiNumInput: Story = {
 				value: 100,
 				label: 'Basic Plan',
 				type: 'number',
+				inputClass: 'basic-input',
 			},
 			{
 				key: 'pro',
